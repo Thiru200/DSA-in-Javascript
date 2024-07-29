@@ -21,7 +21,7 @@ class LRU{
         this.head.next = this.tail;
         this.tail.prev = this.head;
         this.head.prev = null;
-        this.tail.next = null;
+        this.tail.next = null; 
     }
     deleteNode(node) {
         node.prev.next = node.next;
