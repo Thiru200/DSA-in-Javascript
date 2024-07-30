@@ -49,6 +49,17 @@ function ReverseLinkedListWithGroupBySize2(head, k) {
     }
     return head;
 }
+function fnReverseList(head) {
+    let curr = head;
+    let prev = null;
+    while (curr != null) {
+        let next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
 class Node {
     constructor(data) {
         this.data = data;
