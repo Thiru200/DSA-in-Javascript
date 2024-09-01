@@ -1,12 +1,25 @@
 #Method1
 function IsSubSequenceChar(str1,str2){
-  let j=0;
-  for(let i=0;i<str1.length&&j<str2.length;j++){
-    if(str1[i]==str2[j]){
-        j++;
+   let a='';
+        let b='';
+    if(A.length==B.length)
+    {
+      a=A;
+      b=B;        
+    }
+    else
+    {
+      a=A.length>B.length?A:B;
+      b=A.length<B.length?A:B;
+    }
+    let j=0;
+  for(var i=0;i<a.length && j<b.length;i++)
+  {
+  if(a[i]==b[j]){
+    j++;
     }
   }
-  return(j==str2.length);
+  return (j===b.length);
 }
 let result=IsSubSequenceChar("AMMA","AM");
 console.log(result);
